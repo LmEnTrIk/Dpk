@@ -1,0 +1,216 @@
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+// Підключення шрифтів
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,500,600,700&display=swap");
+@import "header.scss";
+@import "footer.scss";
+
+//-------------
+.wrapper__sport{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	min-height: 100vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	font-family: $fontFamily;
+}
+
+.page__sport{
+	flex: 1 1 auto;
+	width: 100%;
+	padding: 85px  0;
+	.sport__container {
+		.block__row {
+			display:flex;
+			flex-wrap:wrap;
+			@media (max-width: 700.98px) {
+				flex-direction: column;
+			}
+			.block__element {
+				flex: 0 1 50%;
+				.sport__content {
+					
+					.ell {
+						display:flex;
+						padding: 15px;
+						margin: 0;
+						gap: 50px;
+						@media (max-width: 1270px) {
+							flex-direction: column;
+							align-items: center;
+						}
+						.block-title {
+							text-align: center;
+							align-items: center;
+							margin: 0px 0 50px 0;
+							border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+							flex: 0 1 100%;
+							.title-h1{
+								font-family: $fontFamily;
+								font-style: normal;
+								font-weight: 500;
+								font-size: 25px;
+								line-height: 24px;
+								color: $darckColor
+							}
+						}
+						.admin__img {
+							width: 300px;
+							height: 300px;
+							border-radius: 150px 0px;
+							filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+							-o-object-fit: cover;
+							object-fit: cover;
+							-o-object-position: center;
+							object-position: center;
+						}
+						.img__el-1 {
+							border-radius: 0px 150px;
+						}
+						.img__el-2 {
+							border-radius: 150px 0px;
+						}
+						.img__el-3 {
+							border-radius: 150px 0px;
+						}
+						.img__el-4 {
+							border-radius: 0px 150px;
+						}
+						.sub-title {
+							flex: 0 1 50%;
+							font-family: $fontFamily;
+							font-style: normal;
+							font-weight: 400;
+							font-size: 20px;
+							line-height: 24px;
+							color: $darckColor
+
+						}
+
+
+
+					}
+				}
+			}
+			.block__element-0 {
+				flex: 0 1 100%;
+			}
+			.block__element-1 {
+				flex: 0 1 50%;
+			}
+			.block__element-2 {
+				flex: 0 1 50%;
+			}
+			.block__element-3 {
+				flex: 0 1 50%;
+			}
+			.block__element-4 {
+				flex: 0 1 50%;
+			}
+		}
+	}
+	.body-second {
+		margin: 100px 0;
+		position: relative;
+		background-color: $mainColor;
+		.body-zagl__container {
+			//max-width: 100%;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 75px 15px;
+			.body-zagl__text {
+				font-family: $fontFamily;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 48px;
+				line-height: 60px;
+				text-transform: uppercase;
+				color: $whiteColor;
+			}
+			.body-zagl__text-2{
+				font-family: $fontFamily;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 24px;
+				line-height: 29px;				
+			}
+		}
+	}
+	.akardion__container{
+		padding: 3vh 0;
+		.block{
+			margin: 0 0 30px 0;
+		}
+		//.block__item{}
+		.block__title{
+			width: 100%;
+			text-align: left;
+			background-color: transparent;
+			color: $darckColor;
+			margin: 10px;
+			position: relative;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 30px;
+		}
+		.block-1 {
+			.block__item{
+				border-top: 1px solid #37DAD0;
+				border-bottom: 1px solid #37DAD0;
+			}
+		}
+		.block__text{
+			padding:  10px 10px 0px 10px;
+		}
+		.block._init{
+			.block__title{
+				cursor: pointer;
+				padding: 10px 40px 10px 10px;
+				&:after,&:before{
+					content: "";
+					width: 40px;
+					height: 1px;
+					background-color: $darckColor;
+					position: absolute;
+					right: 10px;
+					top: 2vh;
+					transition: transform 0.3s ease 0s;
+				}
+				&:after{
+					transform: rotate(-90deg);
+				}
+			}
+			.block__title._active{
+				&:after{
+					transform: rotate(0deg);
+				}
+			}
+		}
+		.tablet{
+			display: flex;
+			justify-content: space-between;
+			border-top: 1px solid #37DAD0;
+			padding: 10px 0;
+		}
+		.href-item{
+			font-style: normal;
+			font-weight: 500;
+			font-size: 24px;
+			color: $darckColor;
+		}
+		.pdf{
+			font-style: normal;
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 21px;
+			color: $darckColor;
+		}
+	}
+}	
+
+

@@ -1,0 +1,101 @@
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+// Підключення шрифтів
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,500,600,700&display=swap");
+@import "header.scss";
+@import "footer.scss";
+
+
+.wrapper__psy{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	min-height: 100vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	font-family: $fontFamily;
+
+	.page__psy{
+		flex: 1 1 auto;
+		width: 100%;
+		padding: 85px  0;
+		.psy__container {
+			.psy {
+				.psy__row {
+					display: flex;
+					flex-wrap: wrap;
+					.block__element {
+						flex: 0 1 100%;
+						justify-content: space-between;
+						
+						.block__content {
+							padding: 15px 0 40px;
+							display: flex;
+							flex-wrap: wrap;
+							
+							border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+							.psy-title {
+								flex: 0 1 100%;
+								font-style: normal;
+								font-weight: 500;
+								font-size: 48px;
+								line-height: 58px;
+							}
+							.psy-sub-title {
+								font-style: normal;
+								font-weight: 400;
+								font-size: 20px;
+								line-height: 133.19%;
+							}
+							.el-1 {
+								.titlle{
+									margin: 15px 0;
+									font-style: normal;
+									font-weight: 500;
+									font-size: 24px;
+									line-height: 29px;
+								}
+								padding: 10px 20px 0 5px;
+								flex: 0 1 50%;
+								@media (max-width: 521px) {
+									flex: 0 1 100%;
+									padding: 5px 10px;
+								}
+							}
+							.el-2 {
+								.titlle{
+									margin: 15px 0;
+									font-style: normal;
+									font-weight: 500;
+									font-size: 24px;
+									line-height: 29px;
+								}
+								padding: 10px 5px 0 40px;
+								flex: 0 1 50%;
+								@media (max-width: 521px) {
+									flex: 0 1 100%;
+									padding: 15px 10px;
+								}
+							}
+						}
+					}
+					.block__element-1 {
+						flex: 0 1 100%;
+					}
+					// .block__element-2 {
+					// }
+					// .block__element-3 {
+					// }
+					// .block__element-4 {
+					// }
+				}
+			}
+		}
+		
+		
+		
+		
+	}	
+}

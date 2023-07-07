@@ -1,0 +1,156 @@
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+// Підключення шрифтів
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,500,600,700&display=swap");
+@import "header.scss";
+@import "footer.scss";
+
+//-------------
+.wrapper__skrynka{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	min-height: 100vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	font-family: $fontFamily;
+
+
+}
+
+.page__skrynka{
+	flex: 1 1 auto;
+	width: 100%;
+	padding: 85px  0;
+	.skrynka__container {
+		@media (max-width: 521px) {
+			
+		}
+		.skrynka__row {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+    		align-content: center;
+			@media (max-width: 1071px) {
+				flex-direction: column;
+			}
+			.block__element {
+				flex: 0 1 50%;
+				padding: 15px;
+				.block__content {
+					font-family: $fontFamily;
+					font-style: normal;
+					font-weight: 400;
+					font-size: 24px;
+					line-height: 29px;
+					color: $darckColor;
+					.title{
+						font-style: normal;
+						font-weight: 400;
+						font-size: 76px;
+						line-height: 65px;
+					}
+					.padding{
+						margin: 0 0 15px 20px;
+					}
+					.email{
+						display: flex;
+						align-items: center;
+						justify-content: flex-start;
+						flex-direction: row;
+						@media (max-width: 521px) {
+							align-items: center;
+						}
+						.email__icon {
+							width: 40px;
+							height: 40px;
+							margin: 0 10px;
+							@media (max-width: 521px) {
+								margin: 0;
+							}
+						}
+					}
+
+				}
+			}
+			.block__element-1 {
+				flex: 0 1 100%;
+			}
+			// .block__element-2 {
+			// }
+			// .block__element-3 {
+			// }
+		}
+	}
+	.body-second {
+		margin: 100px 0;
+		position: relative;
+		background-color: $mainColor;
+		.body-zagl__container {
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 75px 15px;
+			.body-zagl__text {
+				font-family: $fontFamily;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 48px;
+				line-height: 60px;
+				text-transform: uppercase;
+				color: $whiteColor;
+			}
+		}
+	}
+	.internet__container {
+		.internet {
+			.internet__row {
+				display: flex;
+				flex-wrap: wrap;
+				@media (max-width: 1071px) {
+					flex-direction: column;
+				}
+				.block__element {
+					flex: 0 1 50%;
+					.internet__content {
+						padding: 0 15px 15px;
+						font-style: normal;
+						font-weight: 400;
+						font-size: 20px;
+						line-height: 24px;
+						.title{
+							font-weight: 500;
+							font-size: 20px;
+						}
+						.icon-p{
+							width: 100%;
+							border-radius: 22px;
+							filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+							-o-object-fit: cover;
+							object-fit: cover;
+							-o-object-position: center;
+							object-position: center;
+						}
+					}
+				}
+				// .block__element-1 {
+				// }
+				// .block__element-2 {
+				// }
+				.block__element-3 {
+					flex: 0 1 100%;
+				}		
+			}
+		}
+	}
+	
+	
+	
+
+	
+
+
+}	

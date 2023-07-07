@@ -1,0 +1,138 @@
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+// Підключення шрифтів
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,500,600,700&display=swap");
+@import "header.scss";
+@import "footer.scss";
+
+.wrapper__studentu{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	min-height: 100vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	font-family: $fontFamily;
+}
+.page__studentu{
+	flex: 1 1 auto;
+	width: 100%;
+	padding: 85px  0;
+
+	
+}	
+.akardion__container{
+	padding: 3vh 0;
+}
+.block{
+	margin: 0 0 30px 0;
+}
+//.block__item{}
+.block__title{
+	width: 100%;
+	text-align: left;
+	background-color: transparent;
+	color: $darckColor;
+	margin: 10px;
+	position: relative;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+}
+.block-1 {
+	.block__item{
+		border-top: 1px solid #37DAD0;
+		border-bottom: 1px solid #37DAD0;
+	}
+}
+.block__text{
+	padding:  10px 10px 0px 10px;
+}
+.block._init{
+	.block__title{
+		cursor: pointer;
+		padding: 10px 40px 10px 10px;
+		&:after,&:before{
+			content: "";
+			width: 40px;
+			height: 1px;
+			background-color: $darckColor;
+			position: absolute;
+			right: 10px;
+			top: 2vh;
+			transition: transform 0.3s ease 0s;
+		}
+		&:after{
+			transform: rotate(-90deg);
+		}
+	}
+	.block__title._active{
+		&:after{
+			transform: rotate(0deg);
+		}
+	}
+}
+.tablet{
+	display: flex;
+    justify-content: space-between;
+	border-top: 1px solid #37DAD0;
+	padding: 10px 0;
+}
+.href-item{
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	color: $darckColor;
+}
+.pdf{
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 21px;
+	color: $darckColor;
+}
+// .block-1 .block__item{
+// 	background-color: $color_3;
+// }
+
+// .block._init .block__title{
+// 	cursor: pointer;
+// }
+// .block._init .block__title{
+// 	padding: 10px 40px 10px 10px;
+// }
+// .block._init .block__title{
+// 	&:after,&:before{
+// 		content: "";
+// 		width: 20px;
+// 		height: 1px;
+// 		background-color: $darckColor;
+// 		position: absolute;
+// 		right: 10px;
+// 		top: 10px;
+// 		transition: transform 0.3s ease 0s;
+// 	}
+// 	&:after{
+// 		transform: rotate(-90deg);
+// 	}
+// }
+
+// .block._init .block__title::before,
+// .block._init .block__title::after{
+// 	content: "";
+// 	width: 20px;
+// 	height: 1px;
+// 	background-color: $darckColor;
+// 	position: absolute;
+// 	right: 10px;
+// 	top: 10px;
+// 	transition: transform 0.3s ease 0s;
+// }
+// .block._init .block__title::after{
+// 	transform: rotate(-90deg);
+// }
+// .block._init .block__title._active::after{
+// 	transform: rotate(0deg);
+// }

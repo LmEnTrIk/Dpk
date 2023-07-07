@@ -1,0 +1,194 @@
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:16px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+body.lock{overflow: hidden;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+/*--------------------*/
+$fontFamily: Inter;
+$fontSize: rem(16);
+//Основні кольори
+$mainColor:#35A972;
+$darckColor:#242424;
+$whiteColor:#F8F8F8;
+
+$color_3:rgba(53, 169, 114, 0.45);
+$color_1:#FFFFFF;
+$color_4:#000000;
+$color_5:#32373C;
+
+//Мінімальна ширина сторінки
+$minWidth: 320;
+//Ширина полотна макету
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера
+$minWidthContainer: 1440;
+//Загальний відступ контейнера
+$containerPadding: 30;
+//-------------
+//Baza
+
+[class*="__container"] {
+	margin: 0 auto;
+ 	max-width: 1470px;
+	padding: 0 15px;
+}
+[class*="__link"] {
+	&:hover{
+		text-decoration: underline;
+	}
+}
+/* Pc */
+@media (max-width: 1470px) {
+	[class*="__container"] {
+		 max-width: 1270px;
+	}
+}
+@media (max-width: 1270px) {
+	[class*="__container"] {
+		 max-width: 1070px;
+	}
+}
+@media (max-width: 1070px) {
+	[class*="__container"] {
+		 max-width: 970px;
+	}
+}
+/* tablet */
+@media (max-width: 991.98px) {
+	[class*="__container"] {
+		 max-width: 750px;
+	}
+}
+/* mobaile */
+@media (max-width: 767.98px) {
+	[class*="__container"] {
+		 max-width: none;
+	}
+}
+/* Pc */
+@media (max-width: 600.98px) {
+	[class*="__container"] {
+		 max-width: none;
+	}
+}
+
+@media (max-width: 411.98px) {
+	[class*="__container"] {
+		 max-width: none;
+	}
+}
+// .block{
+// 	width: 300px / 960px * 100%;
+// 	background-color: #666;
+// 	padding: 30px;
+// 	line-height: 60px;
+// 	.block__text{
+// 		font-size: $fz;
+// 		span{
+// 			color: green;
+// 		}
+// 	}
+// }
+// .link{
+// 	@include fontz(80px,green);
+// 	color: $color_1;
+// 	text-decoration: underline;
+// 	font-size: $fz;
+// 	.block &{
+// 		font-size: $fz;
+// 	}
+// 	&:hover{
+// 		color: $color_2;
+// 	}
+// 	@extend .tplborder;
+// }
+// .link-2{
+// 	@include fontz(50px,green);
+// 	border-bottom: 5px dashed #000;
+// 	@extend .tplborder;
+// }
+
+// Шаблон №1
+.tplborder{
+	font-size: 100px;
+	border-bottom: 5px dashed red;
+}
+@mixin fontz($f,$c){
+	font-size: $f;
+	color: $c;
+}
+
+.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: #242424c4;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: all 0.8s ease 0s;
+	z-index: 100;
+}
+
+.popup.open{
+	opacity: 1;
+	visibility: visible;
+}
+
+.popup.open .popup__content{
+	transform: perspective(600px) translate(0px,0%) rotateX(0deg);
+	opacity: 1;
+}
+
+.popup__body {
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 30px 10px;
+}
+.popup__content {
+	background-color: $whiteColor;
+	color: $darckColor;
+	max-width: 800px;
+	padding: 30px;
+	position: relative;
+	transition: all 0.8s ease 0s;
+	opacity: 0;
+	transform: perspective(600px) translate(0px,-100%) rotateX(45deg);
+}
+.popup__content-image{
+	padding: 0;
+}
+.popup__image img{
+	max-width: 100%;
+}
+.popup__close {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-size: 20px;
+	color: $darckColor;
+	text-decoration: none;
+}
+.popup__title {
+	font-size: 40px;
+	margin-bottom: 1em;
+}
+//.popup__text {}
+

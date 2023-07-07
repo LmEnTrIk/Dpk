@@ -1,0 +1,190 @@
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+// Підключення шрифтів
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,500,600,700&display=swap");
+@import "header.scss";
+@import "footer.scss";
+
+[class*="__icon"] {
+	width: 40px;
+	height: 40px;	
+	margin: 0 10px 0 0;
+}
+//-------------
+.wrapper__contact{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	min-height: 100vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	font-family: $fontFamily;
+	
+	.page__procol{
+		flex: 1 1 auto;
+		width: 100%;
+		padding: 85px  0;
+		.contact {
+			padding: 0 0 50px 0;
+			/*flex-container*/
+			.contact__container {
+				padding: 0 0 0 0;
+				/* flex-контейнер */
+				.contact__row {
+					display:flex;
+					flex-wrap:wrap;
+					justify-content: space-around;
+					/*flex-element*/
+					.contact__element {
+						flex: 0 1 50%;	
+						@media (max-width: 513.98px) {
+							flex: 0 1 100%;
+						}
+					}
+					.contact__element-1 {
+						.contact__content {	
+							.contact__title{
+								font-family: $fontFamily;
+								font-weight: 400;
+								font-size: 76px;
+								line-height: 93px;
+								color: $mainColor;
+								text-transform: uppercase;
+								@media (max-width: 513.98px) {
+									font-size: 50px;
+									line-height: 60px;
+								}
+							}
+							.contact__sub-title {
+								padding: 50px 0 0 50px;
+								font-family: $fontFamily;
+								font-weight: 400;
+								font-size: 36px;
+								line-height: 44px;
+								color: $darckColor;	
+							}
+							@media (max-width: 1270px) {
+								.contact__sub-title{
+									display: none;
+								}
+							}
+						}
+					}
+					.contact__element-2 {
+						.contact__carta {
+							min-width: 715px;
+							min-height: 600px;
+							border-radius: 150px 0px;
+							@media (max-width: 702.98px) {
+								min-width: 715px;
+							}
+							@media (max-width: 578.98px) {
+								min-width: 550px;
+							}
+							@media (max-width: 319.98px) {
+								min-width: 320px;
+							}
+						}
+					}
+					.contact__element-3 {
+						.contact__content {
+							padding: 50px 0 0 0;
+							.contact__title{
+								padding: 0 0 0 40px;
+								font-family: $fontFamily;
+								font-style: normal;
+								font-weight: 400;
+								font-size: 24px;
+								line-height: 29px;
+								align-items: center;
+								text-transform: capitalize;
+								color: $darckColor;
+							}
+							.contact__sub-title {	
+								font-family: $fontFamily;
+								font-style: normal;
+								font-weight: 400;
+								font-size: 20px;
+								line-height: 24px;
+								align-items: center;
+								text-transform: capitalize;
+								color: $darckColor;
+								.content__element-1 {
+									display: flex;
+									flex-direction: row;
+									align-items: center;
+									padding: 30px 0 0 0;
+								}
+								.content__element-2 {
+									display: flex;
+									flex-direction: row;
+									align-items: center;
+									padding: 30px 0 0 0;
+								}
+								.content__element-3 {
+									display: flex;
+									flex-direction: row;
+									align-items: center;
+									padding: 30px 0 0 0;
+								}
+							}
+						}
+					}
+					.contact__element-4 {
+		
+						.contact__content {
+							padding: 50px 0 0 0;
+							.contact__title{
+								padding: 0 0 0 40px;
+								font-family: $fontFamily;
+								font-style: normal;
+								font-weight: 400;
+								font-size: 24px;
+								line-height: 29px;
+								align-items: center;
+								text-transform: capitalize;
+								color: $darckColor;
+							}
+		
+							.contact__sub-title {
+								font-family: $fontFamily;
+								font-style: normal;
+								font-weight: 400;
+								font-size: 20px;
+								line-height: 24px;
+								align-items: center;
+								text-transform: capitalize;
+								color: $darckColor;
+								.content__element-1 {
+									display: flex;
+									flex-direction: row;
+									align-items: center;
+									padding: 30px 0 0 0;
+								}
+								.content__element-2 {
+									display: flex;
+									flex-direction: row;
+									align-items: center;
+									padding: 30px 0 0 0;
+								}
+								.content__element-3 {
+									display: flex;
+									flex-direction: row;
+									align-items: center;
+									padding: 30px 0 0 0;
+								}
+							}
+						}
+					}
+					
+					
+				}
+				
+			}
+			
+		}
+	}	
+
+}
